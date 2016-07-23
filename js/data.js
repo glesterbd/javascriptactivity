@@ -1,24 +1,24 @@
 var students = { "MIT" : [
-{ "name" : "Reymar", "gender" : "Male" },
-{ "name" : "Cindy", "gender" : "Female" },
-{ "name" : "Kevin", "gender" : "Male" }
+{ "name" : "Reymar", "gender" : "Male", "action" : " " },
+{ "name" : "Cindy", "gender" : "Female", "action" : " "},
+{ "name" : "Kevin", "gender" : "Male", "action" : " "},
+{ "name" : "Dan", "gender" : "Male", "action" : " "},
+{ "name" : "Ed", "gender" : "Male", "action" : " "},
+{ "name" : "Glester", "gender" : "Male", "action" : " "},
+{ "name" : "Jeffrey", "gender" : "Male", "action" : " "}
 ]
 } 
 
-//var htmlStudents = "<tr>";
-//MODIFY TABLE HEADER
-var htmlStudents = "<tr> <th>Name</th> <th>Gender</th> </tr>";
+
+var htmlStudents = "<tr> <th>Name</th> <th>Gender</th> <th>Action</th></tr>";
 for(i=0;i<students.MIT.length;i++)
 {
-//htmlStudents+="<td>";
-htmlStudents+="<table border='1' width=100 >";
-htmlStudents+="<tr><td>"+ students.MIT[i].name+"</td><td width=50>"+ students.MIT[i].gender+"</td></tr>";
-//htmlStudents+="<tr><td><b>Gender</b></td><td width=50>"+ students.MIT[i].gender +"</td></tr>";
-// MY FIRST ATTEMP TO MODIFY ROWS
-//htmlStudents+="<tr><td><b>Name</b></td><td width=50>"+ students.MIT[i].name+"</td>"<td> width=50>"+ students.MIT[i].gender +"</td>"</tr>";
-//htmlStudents+="</td>";
+htmlStudents+="<table border='1'>";
+//htmlStudents+="<tr><td>"+ students.MIT[i].name+"</td><td>"+ students.MIT[i].gender+"</td> <td><button type="button" class="btn btn-primary">View Resume</button></td> </tr>";
+htmlStudents+="<tr><td>"+ students.MIT[i].name+"</td><td>"+ students.MIT[i].gender+"</td> <td>"+ students.MIT[i].action+"</td> </tr>";
+//htmlStudents+="<tr><td>"+ students.MIT[i].name+"</td><td>"+ students.MIT[i].gender+"</td> </tr>";
 }
 htmlStudents += "<tr>";
 
-var _table2 = document.getElementById('myTable2');
-_table2.innerHTML = htmlStudents;
+var _table3 = document.getElementById('myTable3');
+_table3.innerHTML = htmlStudents;
